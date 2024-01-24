@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Choice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFpaBqWYUPFLRiC3OACnpWPkFfKcnRhSY&callback=initMap"></script>
+    <h1><div class="p-3 mb-2 bg-dark text-white" id="headline">DINNER TIME!</div></h1>
+</head>
+<body style="background-image: url('food.webp'); background-size: cover;">
+
+        <div class="container" id="inputsection">
+    
+            <div id="choice">
+            <!-- Question to choose between home and restaurant -->
+                <p>Do you want to eat at home or in a restaurant?</p>
+                <input type="radio" id="home" name="choice" value="home"> <label for="home">Home</label>
+                <input type="radio" id="restaurant" name="choice" value="restaurant"> <label for="restaurant">Restaurant</label>
+            </div> 
+            <div id="inputvalues">
+
+            <!-- Input fields for home -->
+                <div id="homeInputs" style="display: none;">
+                    <label for="foodName">Enter the food name:</label>
+                    <input type="text" id="foodName" placeholder="Food name">
+                </div> 
+                
+                <!-- Input fields for restaurant -->
+                <div  id="restaurantInputs" style="display: none;">
+                    <label for="cityname">Enter the city:</label>
+                    <input type="text" id="cityname" placeholder="City">
+                    <label for="minrating">Enter minimum rating:</label>
+                    <input type="number" id="minrating" placeholder="Minimum rating">
+                </div>
+
+                <div id="loadingbutton" style="display: none;">
+                <!-- Button to perform the search  -->
+                    <button class="btn btn-primary" type=button  id="searchButton">Search</button>
+                </div>
+            </div>
+            <!-- Result container  -->
+            <div id="loadingMessage" style="display: none;">
+                Please wait while we look for some good resturants for you!
+            </div>
+            <div id="foodResult" style="display: none;">
+            </div>
+            <div id="map"  style="height: 400px ; width: 1300px ; display: none; " >
+            </div>
+    </p>
+    
+</div>
+     
+</body>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js"></script>
+</html> 
